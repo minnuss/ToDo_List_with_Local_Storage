@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container h1 {
+  font-size: 60px;
+  position: absolute;
+  top: 20px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  /* -webkit-text-stroke: 0.5px black; */
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url(img/background.jpeg) no-repeat center;
+  background-size: cover;
+  padding: 10px;
+}
+
+.list-content {
+  position: relative;
+  max-width: 800px;
+  min-width: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  color: #fff;
+  background-color: rgba(21, 33, 77, 0.602);
+  justify-content: center;
+  flex: wrap;
+  box-shadow: -1px 1px 20px black;
+}
+
+.list-content ul {
+  max-width: 400px;
+  padding: 10px;
+  display: flex;
+  margin-left: 40px;
+  flex-direction: column;
+  list-style: decimal;
+}
+
+.list-content ul li {
+  margin-bottom: 4px;
+  text-transform: capitalize;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* classlist for javascript span X element */
+.spanX {
+  color: rgb(123, 255, 255);
+  text-decoration: line-through;
+}
+
+.spanX span {
+  position: absolute;
+  right: 0;
+  font-size: 1.8rem;
+  line-height: 1.5rem;
+  color: crimson;
+  font-weight: 800;
+}
+
+.input-div {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 54px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: rgba(21, 33, 77, 0.602);
+}
+
+/* gradient bottom color of input */
+.input-div:after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 999;
+  height: 5px;
+  border-radius: 0 0 4px 4px;
+  margin: auto;
+  background-position: 0% 0%;
+  /* background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6); */
+  background: linear-gradient(
+    to right,
+    #b294ff,
+    #ff8be2,
+    #ffd26a,
+    #f9f871,
+    #e8c2fd,
+    #4e97fa,
+    #007f89,
+    #57e6e6,
+    #ff8be2,
+    #b294ff,
+    #ff8be2
+  );
+  background-size: 1300% auto;
+  animation: gradient 6s linear infinite;
+}
+
+/* animation for gradient color of input */
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* typing input color */
+.input-div input {
+  color: #ffffff;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+/* placeholder color */
+.input-div input::-webkit-input-placeholder {
+  color: #bebfc0;
+  /* width: 100%; */
+}
+
+.form {
+  width: 95%;
+  padding: 10px;
+}
+.input {
+  width: 90%;
+  max-width: 400px;
+  min-width: 300px;
+  height: 25px;
+  /* line-height: 25px; */
+  border-radius: 8px;
+  outline: none;
+  border-style: none;
+  background: transparent;
+}
+
+/* btn for input */
+.btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 40px;
+  color: rgb(123, 255, 255);
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  background: transparent;
+  border: none;
+}
+
+.btn:hover {
+  color: rgba(21, 33, 77, 0.602);
+}
+
+/* @media (max-width: 1200px) {
+  .list-content {
+    width: 60%;
+  }
+
+  .input-div {
+    max-width: 60%;
+  }
+
+  .input-div:after {
+    width: 99.2%;
+  }
+}
+
+@media (max-width: 720px) {
+  .list-content {
+    width: 70%;
+  }
+
+  .input-div {
+    max-width: 70%;
+  }
+
+  .input-div:after {
+    width: 99.2%;
+  }
+} */
